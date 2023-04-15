@@ -8,4 +8,12 @@
 
 body {
     margin: 0;
+    padding: 0;
+}
+
+#main-container {
+    background-color: aqua;
+    width: 700px;
+    margin: 350px auto;
+    text-align: center;
 }
