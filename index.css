@@ -1,3 +1,11 @@
+/* Global Variables */
+:root {
+    --color1: #5A537B;
+    --color2: #273549;
+    --top-background-color: #6943FF;
+    --bottom-background-color: #1F2937;
+}
+
 body {
     margin: 0;
 }
