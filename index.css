@@ -2,6 +2,7 @@
 :root {
     --color1: #5A537B;
     --color2: #273549;
+    --text-color: #B295FF;
     --top-background-color: #6943FF;
     --bottom-background-color: #1F2937;
 }
@@ -12,8 +13,44 @@ body {
 }
 
 #main-container {
-    background-color: aqua;
+    background-color: #1F2937;
     width: 700px;
+    /*height: 580px;*/
     margin: 350px auto;
     text-align: center;
+}
+
+#title-container {
+    background-color: var(--top-background-color);
+    color: white;
+    height: 300px;
+}
+
+#conversion-container {
+    background-color: var(--bottom-background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.sub-unit-div {
+    background-color: var(--color2);
+    max-height: 120px;
+    margin: 10px 25px 10px 25px;
+
+}
+
+/* Specific margins for top and bottom div */
+#top-div-margin {
+    margin-top: 25px;
+}
+
+#bottom-div-margin {
+    margin-bottom: 25px;
+}
+
+.conversion-text {
+    color: white;
 }
