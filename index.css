@@ -8,6 +8,7 @@
 }
 
 body {
+    background-color: #424f61;
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
@@ -22,6 +23,7 @@ body {
     border-radius: 10px;
 }
 
+/* Top Section */
 #title-container {
     background-color: var(--top-background-color);
     color: white;
@@ -58,6 +60,7 @@ body {
     border: none;
 }
 
+ /*Bottom Section */
 #conversion-container {
     background-color: var(--bottom-background-color);
     color: var(--text-color);
