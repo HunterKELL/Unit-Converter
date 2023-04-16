@@ -17,7 +17,7 @@ body {
     background-color: #1F2937;
     width: 800px;
     /*height: 580px;*/
-    margin: 350px auto;
+    margin: 250px auto;
     text-align: center;
     border-radius: 10px;
 }
@@ -69,12 +69,6 @@ body {
     border-radius: 10px;
 }
 
-.sub-unit-div {
-    background-color: var(--color2);
-    height: 120px;
-    margin: 10px 25px 10px 25px;
-}
-
 /* Specific margins for top and bottom div of bottom section */
 #top-div-margin {
     margin-top: 25px;
@@ -84,6 +78,18 @@ body {
     margin-bottom: 25px;
 }
 
+.sub-unit-div {
+    background-color: var(--color2);
+    height: 120px;
+    margin: 10px 25px 10px 25px;
+}
+
+.sub-title {
+    font-size: 25px;
+    font-weight: 500;
+}
+
 .conversion-text {
     color: white;
+    font-size: 18px;
 }
