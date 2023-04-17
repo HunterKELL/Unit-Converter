@@ -38,6 +38,7 @@ convertBtn.addEventListener("click", function() {
     console.log(massArray)
     conversionText()
     console.log(conversionText())
+    clearArrays()
 })
 
 // Functions for the conversions
@@ -99,4 +100,10 @@ function conversionText() {
     let massText = `${unitNumber} kilos = ${pounds} pounds | ${unitNumber} pounds = ${kilograms} kilos`
 
     massKiloPounds.innerHTML = massText
+}
+
+function clearArrays() {
+    lengthArray = []
+    volumeArray = []
+    massArray = []
 }
