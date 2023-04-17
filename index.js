@@ -5,6 +5,8 @@
 */
 let unitNumber = 20;
 let lengthArray = []
+let volumeArray = []
+let massArray = []
 const feet = 3.281
 const gallon = 0.264
 const pound = 2.204
@@ -32,3 +34,33 @@ function findLength() {
 
 findLength()
 console.log(lengthArray)
+
+function findVolume() {
+    let literNum = unitNumber / gallon
+    //console.log(literNum)
+    let literUnit = Number(literNum.toFixed(3))
+    let gallonNum = unitNumber * gallon
+    //console.log(gallonNum)
+    let gallonUnit = Number(gallonNum.toFixed(3))
+
+    volumeArray.push(literUnit)
+    volumeArray.push(gallonUnit)
+}
+
+findVolume()
+console.log(volumeArray)
+
+function findMass() {
+    let kilosNum = unitNumber / pound
+    //console.log(kilosNum)
+    let kilosUnit = Number(kilosNum.toFixed(3))
+    let poundsNum = unitNumber * pound
+    //console.log(poundsNum)
+    let poundsUnit = Number(poundsNum.toFixed(3))
+
+    massArray.push(kilosUnit)
+    massArray.push(poundsUnit)
+}
+
+findMass()
+console.log(massArray)
