@@ -3,7 +3,7 @@
 1 liter = 0.264 gallon
 1 kilogram = 2.204 pound
 */
-let unitNumber = 20;
+let unitNumber = ''
 let lengthArray = []
 let volumeArray = []
 let massArray = []
@@ -14,11 +14,26 @@ const pound = 2.204
 const numberInput = document.getElementById("number-input")
 const convertBtn = document.getElementById("convert-btn")
 
+const lengthMeterFeet = document.getElementById("length-meter-feet")
+//console.log(lengthMeterFeet)
+const volumeLiterGallon = document.getElementById("volume-liters-gallons")
+//console.log(volumeLiterGallon)
+const massKiloPounds = document.getElementById("mass-kilograms-pounds")
+//console.log(massKiloPounds)
+
 convertBtn.addEventListener("click", function() {
-    //console.log("clicked")
-    
+    console.log("clicked")
+    value = numberInput.value
+    //console.log(numberInput)
+    unitNumber = Number(value)
+    console.log(unitNumber)
+    findLength()
+    console.log(lengthArray)
+    findVolume()
+    console.log(volumeArray)
+    findMass()
+    console.log(massArray)
 })
-//console.log(numberInput)
 
 function findLength() {
     let meterNum = unitNumber / feet
@@ -32,8 +47,8 @@ function findLength() {
     lengthArray.push(meterUnit) 
 }
 
-findLength()
-console.log(lengthArray)
+//findLength()
+//console.log(lengthArray)
 
 function findVolume() {
     let literNum = unitNumber / gallon
@@ -47,8 +62,8 @@ function findVolume() {
     volumeArray.push(gallonUnit)
 }
 
-findVolume()
-console.log(volumeArray)
+//findVolume()
+//console.log(volumeArray)
 
 function findMass() {
     let kilosNum = unitNumber / pound
@@ -62,5 +77,9 @@ function findMass() {
     massArray.push(poundsUnit)
 }
 
-findMass()
-console.log(massArray)
+//findMass()
+//console.log(massArray)
+
+function conversionText() {
+
+}
