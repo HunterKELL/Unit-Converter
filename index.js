@@ -21,7 +21,7 @@ const volumeLiterGallon = document.getElementById("volume-liters-gallons")
 // 20 liters = 5.284 gallons | 20 gallons = 75.708 liters
 //console.log(volumeLiterGallon)
 const massKiloPounds = document.getElementById("mass-kilograms-pounds")
-// 20 liters = 5.284 gallons | 20 gallons = 75.708 liters
+// 20 kilos = 44.092 pounds | 20 pounds = 9.072 kilos
 //console.log(massKiloPounds)
 
 convertBtn.addEventListener("click", function() {
@@ -40,6 +40,7 @@ convertBtn.addEventListener("click", function() {
     console.log(conversionText())
 })
 
+// Functions for the conversions
 function findLength() {
     let meterNum = unitNumber / feet
     //console.log(meterNum)
@@ -52,9 +53,6 @@ function findLength() {
     lengthArray.push(meterUnit) 
 }
 
-//findLength()
-//console.log(lengthArray)
-
 function findVolume() {
     let literNum = unitNumber / gallon
     //console.log(literNum)
@@ -63,12 +61,9 @@ function findVolume() {
     //console.log(gallonNum)
     let gallonUnit = Number(gallonNum.toFixed(3))
 
-    volumeArray.push(literUnit)
     volumeArray.push(gallonUnit)
+    volumeArray.push(literUnit)
 }
-
-//findVolume()
-//console.log(volumeArray)
 
 function findMass() {
     let kilosNum = unitNumber / pound
@@ -78,13 +73,11 @@ function findMass() {
     //console.log(poundsNum)
     let poundsUnit = Number(poundsNum.toFixed(3))
 
-    massArray.push(kilosUnit)
     massArray.push(poundsUnit)
+    massArray.push(kilosUnit)
 }
 
-//findMass()
-//console.log(massArray)
-
+//Function for adding the text after converting
 function conversionText() {
     let foot = lengthArray[0]
     let meters = lengthArray[1]
@@ -93,13 +86,17 @@ function conversionText() {
 
     lengthMeterFeet.innerHTML = lengthText
 
-    /*let liters = volumeArray[0]
-    let gallons = volumeArray[1]
+    let gallons = volumeArray[0]
+    let liters = volumeArray[1]
 
     let volumeText = `${unitNumber} liters = ${gallons} gallons | ${unitNumber} gallons = ${liters} liters`
 
-    volumeLiterGallon.innerHTML = volumeText*/
+    volumeLiterGallon.innerHTML = volumeText
 
+    let pounds = massArray[0]
+    let kilograms = massArray[1]
+
+    let massText = `${unitNumber} kilos = ${pounds} pounds | ${unitNumber} pounds = ${kilograms} kilos`
+
+    massKiloPounds.innerHTML = massText
 }
-
-//console.log(conversionText())
