@@ -15,10 +15,13 @@ const numberInput = document.getElementById("number-input")
 const convertBtn = document.getElementById("convert-btn")
 
 const lengthMeterFeet = document.getElementById("length-meter-feet")
+// 20 meters = 65.616 feet | 20 feet = 6.096 meters
 //console.log(lengthMeterFeet)
 const volumeLiterGallon = document.getElementById("volume-liters-gallons")
+// 20 liters = 5.284 gallons | 20 gallons = 75.708 liters
 //console.log(volumeLiterGallon)
 const massKiloPounds = document.getElementById("mass-kilograms-pounds")
+// 20 liters = 5.284 gallons | 20 gallons = 75.708 liters
 //console.log(massKiloPounds)
 
 convertBtn.addEventListener("click", function() {
@@ -33,6 +36,8 @@ convertBtn.addEventListener("click", function() {
     console.log(volumeArray)
     findMass()
     console.log(massArray)
+    conversionText()
+    console.log(conversionText())
 })
 
 function findLength() {
@@ -81,5 +86,20 @@ function findMass() {
 //console.log(massArray)
 
 function conversionText() {
+    let foot = lengthArray[0]
+    let meters = lengthArray[1]
+
+    let lengthText = `${unitNumber} meters = ${foot} feet | ${unitNumber} feet = ${meters} meters`
+
+    lengthMeterFeet.innerHTML = lengthText
+
+    /*let liters = volumeArray[0]
+    let gallons = volumeArray[1]
+
+    let volumeText = `${unitNumber} liters = ${gallons} gallons | ${unitNumber} gallons = ${liters} liters`
+
+    volumeLiterGallon.innerHTML = volumeText*/
 
 }
+
+//console.log(conversionText())
